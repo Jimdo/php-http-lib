@@ -1,0 +1,4 @@
+/vendor/
+/scripts/composer
+/scripts/phpunit
+.DS_Store
