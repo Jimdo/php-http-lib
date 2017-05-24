@@ -17,7 +17,9 @@ tests        Execute test suite
 
 # Download
 
-WIP - Download Link will follow via composer.org.
+$ https://packagist.org/packages/jimdo/http
+
+$ composer require jimdo/http
 
 # Developement setup
 
