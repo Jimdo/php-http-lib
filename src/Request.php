@@ -10,18 +10,19 @@ class Request
     /** @var string[] */
     private $formData;
 
-    /** @var string[] */
-    private $sessionData;
+    /** @var Session */
+    private $session;
 
     /**
      * @param string[] $queryParams
      * @param string[] $formData
+     * @param Session
      */
-    public function __construct(array $queryParams, array $formData, array $sessionData)
+    public function __construct(array $queryParams, array $formData, Session $session)
     {
         $this->queryParams = $queryParams;
         $this->formData = $formData;
-        $this->sessionData = $sessionData;
+        $this->session = $session;
     }
 
     /**
