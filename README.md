@@ -29,6 +29,10 @@ $ git clone git@github.com:Jimdo/php-http-lib.git
 # Install composer and project dependencies
 
 $ make bootstrap
+
+# Requirements for test-driven
+
+$ (xDebug) phpbrew ext install xdebug
 ```
 
 ## Useful methods in the `Request` Object
@@ -37,8 +41,6 @@ $ make bootstrap
 - <i>getQueryParams()</i> - Returns query params as an array if available
 - <i>getFormData()</i> - Returns information from the form as an array
 - <i>getSessionData()</i> - Returns session data as an array
-
-
 
 ## Useful methods in the `Response` Object
 
