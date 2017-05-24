@@ -27,7 +27,7 @@ class Response
     }
 
     /**
-     * @return string
+     * @return string|null
      */
     public function render()
     {

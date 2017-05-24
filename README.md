@@ -49,3 +49,24 @@ $ (xDebug) phpbrew ext install xdebug
 - <i>addBody()</i> - Attach html code to one string for the correct body format
 - <i>addHeader()</i> - Add one header to the Response Headers
 - <i>render()</i> - Render header and body into correct html output code
+
+## `Session` Object
+
+The Session Object handles with magic proberties and methods.
+
+- Set proberties via __construct or define proberties with the session object
+
+```
+(example)
+1. $session = new Session(["foo" => "bar"]);
+2. $session->foo = "bar";
+```
+
+- Get proberties
+
+```
+(example)
+$session = new Session(["foo" => "bar"]);
+
+$data = $session->foo;
+```
