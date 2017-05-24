@@ -10,18 +10,19 @@ class Request
     /** @var string[] */
     private $formData;
 
-    /** @var string[] */
-    private $sessionData;
+    /** @var Session */
+    private $session;
 
     /**
      * @param string[] $queryParams
      * @param string[] $formData
+     * @param Session
      */
-    public function __construct(array $queryParams, array $formData, array $sessionData)
+    public function __construct(array $queryParams, array $formData, Session $session)
     {
         $this->queryParams = $queryParams;
         $this->formData = $formData;
-        $this->sessionData = $sessionData;
+        $this->session = $session;
     }
 
     /**
@@ -57,18 +58,15 @@ class Request
     }
 
     /**
-     * @param string $key
+     * @param mixed $key
      * @param string $default
      * @return mixed
      */
-    public function getSessionData(string $key = null, string $default = null)
+    public function getSessionData($key = null, string $default = null)
     {
         if ($key !== null) {
-            if (array_key_exists($key, $this->sessionData) === false) {
-                return $default;
-            }
-            return $this->sessionData[$key];
+            return $this->session->$key;
         }
-        return $this->sessionData;
+        return $this->session->$default;
     }
 }
