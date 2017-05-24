@@ -24,7 +24,7 @@ WIP - Download Link will follow via composer.org.
 ```
 # Clone the repository
 
-$ git clone git@github.com:Partyschaum/php-boilerplate.git
+$ git clone git@github.com:Jimdo/php-http-lib.git
 
 # Install composer and project dependencies
 
