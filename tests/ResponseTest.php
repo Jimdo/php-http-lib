@@ -25,4 +25,24 @@ class ResponseTest extends TestCase
 
         $this->assertContains($header, xdebug_get_headers());
     }
+
+    /**
+     * @test
+     */
+    public function itShouldTestBodyAndRendering()
+    {
+        $response = new Response();
+
+        $body = 'hase';
+        $response->addBody($body);
+
+        $body = 'igel';
+        $response->addBody($body);
+
+        $body = 'fuchs';
+        $response->addBody($body);
+
+        $bodyContent = "haseigelfuchs";
+        $this->assertContains($bodyContent, $response->render());
+    }
 }
