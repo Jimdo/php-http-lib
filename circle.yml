@@ -1,0 +1,9 @@
+machine:
+  php:
+    version: '7.0.4'
+dependencies:
+  override:
+    - make bootstrap
+test:
+  override:
+    - make tests
