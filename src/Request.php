@@ -58,18 +58,15 @@ class Request
     }
 
     /**
-     * @param string $key
+     * @param mixed $key
      * @param string $default
      * @return mixed
      */
-    public function getSessionData(string $key = null, string $default = null)
+    public function getSessionData($key = null, string $default = null)
     {
         if ($key !== null) {
-            if (array_key_exists($key, $this->sessionData) === false) {
-                return $default;
-            }
-            return $this->sessionData[$key];
+            return $this->session->$key;
         }
-        return $this->sessionData;
+        return $this->session->$default;
     }
 }
