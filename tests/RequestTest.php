@@ -120,5 +120,6 @@ class RequestTest extends TestCase
 
         $this->assertEquals($sessionData['hase'], $request->getSessionData('hase'));
         $this->assertEquals($sessionData['igel'], $request->getSessionData('igel'));
+        $this->assertEquals(null, $request->getSessionData('hannes'));
     }
 }
