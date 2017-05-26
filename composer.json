@@ -1,6 +1,6 @@
 {
     "name": "jimdo/http",
-    "description": "Libary of Http Clients",
+    "description": "Library of Http Clients",
     "license": "MIT",
     "authors": [
         {
