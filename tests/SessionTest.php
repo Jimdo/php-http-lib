@@ -37,4 +37,20 @@ class SessionTest extends TestCase
         $value = $session->name;
         $this->assertTrue(isset($value));
     }
+
+    /**
+     * @test
+     */
+    public function itShouldModifyGivenSessionData()
+    {
+        $sessionData = [
+            'hase' => 'nicht knuddelig',
+        ];
+
+        $session = new Session($sessionData);
+
+        $session->hase = 'sehr knuddelig';
+
+        $this->assertEquals($sessionData['hase'], 'sehr knuddelig');
+    }
 }
