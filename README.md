@@ -2,11 +2,11 @@
 
 # php-http-lib
 
-This repository is a libary of http clients - Response, Request and Session.
+This repository is a library of http clients - Response, Request and Session.
 
 # Makefile
 
-The libary code provides a Makefile:
+The library code provides a Makefile:
 
 ```
 $ make help
@@ -39,7 +39,7 @@ $ (xDebug) phpbrew ext install xdebug
 
 ## Useful methods in the `Request` Object
 
-- <i>__construct(queryParams, formData, sessionData)</i> - The construct is the field where the query params, form data and session data need to fill in as an array
+- <i>__construct(queryParams, formData, sessionData)</i> - The construct is the field where the query params and form data need to fill in as an array. The third one is a session object.
 - <i>getQueryParams()</i> - Returns query params as an array if available
 - <i>getFormData()</i> - Returns information from the form as an array
 - <i>getSessionData()</i> - Returns session data as an array
@@ -52,9 +52,9 @@ $ (xDebug) phpbrew ext install xdebug
 
 ## `Session` Object
 
-The Session Object handles with magic proberties and methods.
+The Session Object handles with magic properties and methods.
 
-- Set proberties via __construct or define proberties with the session object
+- Set properties via __construct or define properties with the session object
 
 ```
 (example)
@@ -62,7 +62,7 @@ The Session Object handles with magic proberties and methods.
 2. $session->foo = "bar";
 ```
 
-- Get proberties
+- Get properties
 
 ```
 (example)
