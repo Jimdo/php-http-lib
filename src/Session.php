@@ -10,15 +10,9 @@ class Session
     /**
      * @param array $sessionData
      */
-    public function __construct(array $sessionData)
+    public function __construct(array &$sessionData)
     {
-        if ($sessionData !== []) {
-            foreach ($sessionData as $key => $value) {
-
-            // $key defines the proberty and $value fill the proberty
-            $this->__set($key, $value);
-            }
-        }
+        $this->data = &$sessionData;
     }
 
     /**
@@ -32,11 +26,10 @@ class Session
 
     /**
      * @param mixed $name
-     * @return mixed
      */
     public function __get($name)
     {
-        if (array_key_exists($name, $this->data)) {
+        if (isset($this->data[$name])) {
             return $this->data[$name];
         }
         return null;
